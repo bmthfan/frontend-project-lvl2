@@ -1,0 +1,35 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/bmthfan/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/bmthfan/frontend-project-lvl2/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmthfan/frontend-project-lvl2.git"
+  },
+  "author": "Bogdan Pugachuk",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bmthfan/frontend-project-lvl2/issues"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "homepage": "https://github.com/bmthfan/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^7.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}
