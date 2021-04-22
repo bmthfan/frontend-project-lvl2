@@ -1,7 +1,5 @@
-/* eslint-disable no-console */
 import _ from 'lodash';
 import fs from 'fs';
-// import path from 'path';
 
 export default (filepath1, filepath2) => {
   const data1 = JSON.parse(fs.readFileSync(filepath1));
@@ -41,6 +39,6 @@ export default (filepath1, filepath2) => {
       result.push(stack.join(' '));
     }
   }
-  console.log(`{\n${result.join('\n')}\n}`);
+
   return `{\n${result.join('\n')}\n}`;
 };
