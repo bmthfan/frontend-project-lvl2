@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
 import { Command } from '../node_modules/commander/esm.mjs';
 import gendiff from '../src/gendiff.js';
 
