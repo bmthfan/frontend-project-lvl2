@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import fs from 'fs';
+import parsers from './parsers.js';
 
 export default (filepath1, filepath2) => {
-  const data1 = JSON.parse(fs.readFileSync(filepath1));
-  const data2 = JSON.parse(fs.readFileSync(filepath2));
+  const data1 = parsers(filepath1);
+  const data2 = parsers(filepath2);
   const keys1 = _.keys(data1);
   const keys2 = _.keys(data2);
   const keys = _.union(keys1, keys2).sort();
