@@ -12,3 +12,5 @@ Features of the utility:
 
 ## Example
 [![asciicast](https://asciinema.org/a/LNUp82rHeWo34MiKHXJeYW3cm.svg)](https://asciinema.org/a/LNUp82rHeWo34MiKHXJeYW3cm)
+[![asciicast](https://asciinema.org/a/7m9oHeltzj6d0RKLJZugcLwL7.svg)](https://asciinema.org/a/7m9oHeltzj6d0RKLJZugcLwL7)
+[![asciicast](https://asciinema.org/a/HqmqgnvhJdkiS7HSQjWRFugLP.svg)](https://asciinema.org/a/HqmqgnvhJdkiS7HSQjWRFugLP)
