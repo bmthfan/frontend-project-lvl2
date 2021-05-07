@@ -3,6 +3,13 @@ import gendiff from '../src/gendiff.js';
 
 const getFixturePath = (filename) => path.join('__fixtures__', filename);
 
+const filepath1 = getFixturePath('file1.json');
+const filepath2 = getFixturePath('file2.json');
+const filepath3 = getFixturePath('file1.yml');
+const filepath4 = getFixturePath('file2.yml');
+const filepath5 = getFixturePath('file1.yaml');
+const filepath6 = getFixturePath('file2.yaml');
+
 const expected = `{
  - follow: false
    host: hexlet.io
@@ -12,23 +19,8 @@ const expected = `{
  + verbose: true
 }`;
 
-test('gendiff json', () => {
-  const filepath1 = getFixturePath('file1.json');
-  const filepath2 = getFixturePath('file2.json');
-
+test('gendiff', () => {
   expect(gendiff(filepath1, filepath2)).toBe(expected);
-});
-
-test('gendiff yml', () => {
-  const filepath1 = getFixturePath('file1.yml');
-  const filepath2 = getFixturePath('file2.yml');
-
-  expect(gendiff(filepath1, filepath2)).toBe(expected);
-});
-
-test('gendiff yaml', () => {
-  const filepath1 = getFixturePath('file1.yaml');
-  const filepath2 = getFixturePath('file2.yaml');
-
-  expect(gendiff(filepath1, filepath2)).toBe(expected);
+  expect(gendiff(filepath3, filepath4)).toBe(expected);
+  expect(gendiff(filepath5, filepath6)).toBe(expected);
 });
