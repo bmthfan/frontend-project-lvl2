@@ -1,5 +1,7 @@
 import path from 'path';
-import gendiff from '../src/gendiff.js';
+import gendiff from '../src/diff-calc.js';
+import keys from '../src/modified';
+import parsers from '../src/parsers.js';
 
 const getFixturePath = (filename) => path.join('__fixtures__', filename);
 
@@ -10,61 +12,21 @@ const filepath4 = getFixturePath('file2.yml');
 const filepath5 = getFixturePath('file1.yaml');
 const filepath6 = getFixturePath('file2.yaml');
 
-const expected = `
-{
-  common: {
-    + follow: false
-      setting1: Value 1
-    - setting2: 200
-    - setting3: true
-    + setting3: null
-    + setting4: blah blah
-    + setting5: {
-          key5: value5
-      }
-      setting6: {
-          doge: {
-            - wow: 
-            + wow: so much
-          }
-          key: value
-        + ops: vops
-      }
-  }
-  group1: {
-    - baz: bas
-    + baz: bars
-      foo: bar
-    - nest: {
-          key: value
-      }
-    + nest: str
-  }
-- group2: {
-      abc: 12345
-      deep: {
-          id: 45
-      }
-  }
-+ group3: {
-      deep: {
-          id: {
-              number: 45
-          }
-      }
-      fee: 100500
-  }
-}
-`;
+const data1 = parsers(filepath1);
+const data2 = parsers(filepath2);
+const data3 = parsers(filepath3);
+const data4 = parsers(filepath4);
+const data5 = parsers(filepath5);
+const data6 = parsers(filepath6);
 
 test('gendiff json', () => {
-  expect(gendiff(filepath1, filepath2)).toBe(expected);
+  expect(gendiff(data1, data2)).toEqual(keys);
 });
 
 test('gendiff yml', () => {
-  expect(gendiff(filepath3, filepath4)).toBe(expected);
+  expect(gendiff(data3, data4)).toEqual(keys);
 });
 
 test('gendiff yaml', () => {
-  expect(gendiff(filepath5, filepath6)).toBe(expected);
+  expect(gendiff(data5, data6)).toEqual(keys);
 });
