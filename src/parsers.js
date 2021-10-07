@@ -19,7 +19,8 @@ const parse = (data, format) => {
 
 export default (filePath) => {
   const format = path.extname(filePath);
-  const data = fs.readFileSync(filePath);
+  const absolutePath = path.resolve(filePath);
+  const data = fs.readFileSync(absolutePath);
 
   return parse(data, format);
 };
