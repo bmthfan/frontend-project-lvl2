@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/bmthfan/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/bmthfan/frontend-project-lvl2/actions)",
-  "main": "bin/index.js",
+  "main": "bin/gendiff.js",
   "scripts": {
     "test": "npx jest --bail"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/bmthfan/frontend-project-lvl2.git"
   },
-  "author": "Bogdan Pugachuk",
+  "author": "Bogdan Pugachyuk",
   "license": "ISC",
   "type": "module",
   "jest": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/bmthfan/frontend-project-lvl2/issues"
   },
   "bin": {
-    "gendiff": "bin/index.js"
+    "gendiff": "bin/gendiff.js"
   },
   "homepage": "https://github.com/bmthfan/frontend-project-lvl2#readme",
   "dependencies": {
