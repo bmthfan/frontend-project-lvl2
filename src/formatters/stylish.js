@@ -18,6 +18,7 @@ const stylish = (data, replacer = ' ', spacesCount = 4) => {
     if (typeof currentData !== 'object' || _.isNull(currentData)) {
       return `${currentData}`;
     }
+
     const indentSize = depth * spacesCount;
     const currentIndent = replacer.repeat(indentSize);
     const lines = Object
@@ -26,6 +27,7 @@ const stylish = (data, replacer = ' ', spacesCount = 4) => {
       .map(([key, val]) => {
         const { state, value } = val;
         const sign = getKeySign(state);
+
         if (Array.isArray(value)) {
           const [valueBefore, valueAfter] = value;
           const added = getKeySign('added');
@@ -35,14 +37,17 @@ const stylish = (data, replacer = ' ', spacesCount = 4) => {
             `${currentIndent}${added}${key}: ${iter(valueAfter, depth + 1)}`,
           ].join('\n');
         }
+
         return `${currentIndent}${sign}${key}: ${iter(value, depth + 1)}`;
       });
+
     return [
       '{',
       ...lines,
       `${currentIndent}}`,
     ].join('\n');
   };
+
   return iter(data, 0);
 };
 
