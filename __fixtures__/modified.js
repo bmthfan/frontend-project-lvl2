@@ -1,4 +1,4 @@
-const diffObj = {
+const diffData = {
   common: {
     state: 'unchanged',
     value: {
@@ -73,4 +73,4 @@ const diffObj = {
   },
 };
 
-export default diffObj;
+export default diffData;
